@@ -12,7 +12,7 @@ def index():
     url = flask.request.args.get("url")
     return fetch_website(version, url)
 
-        
+
 CONFIG = {"API_KEY": "771df488714111d39138eb60df756e6b"}
 class Person(object):
     def __init__(self, name):
@@ -39,7 +39,7 @@ def load_yaml(filename):
     stream = open(filename)
     deserialized_data = yaml.load(stream, Loader=yaml.Loader) #deserializing data
     return deserialized_data
-    
+
 def authenticate(password):
     # Assert that the password is correct
     assert password == "Iloveyou", "Invalid password!"
@@ -52,7 +52,7 @@ if __name__ == '__main__':
     print("3. Yaml deserialization vulnerability: see file_solution.yaml for a solution")
     print("4. Use of assert statements vulnerability: run program with -O argument")
     choice  = input("Select vulnerability: ")
-    if choice == "1": 
+    if choice == "1":
         new_person = Person("Vickie")  
         print_nametag(input("Please format your nametag: "), new_person)
     elif choice == "2":
